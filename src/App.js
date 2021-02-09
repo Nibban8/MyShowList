@@ -1,9 +1,11 @@
 import React from 'react';
+import useSearch from './useSearch';
+import Home from './routes/Home';
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello reac</h1>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
