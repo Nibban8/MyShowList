@@ -18,7 +18,7 @@ export default function useSearch(url, pageNumber, query) {
     axios({
       method: 'GET',
       url: url,
-      params: { api_key: '392dcca9c3aba6e2263f0c9dd8e5be23', page: pageNumber },
+      params: { api_key: process.env.REACT_APP_API_KEY, page: pageNumber },
       cancelToken: new axios.CancelToken((c) => (cancel = c)),
     })
       .then((res) => {

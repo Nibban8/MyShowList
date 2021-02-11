@@ -1,11 +1,12 @@
 import React, { useState, useRef, useCallback } from 'react';
 import useSearch from '../useSearch';
+import Loading from '../components/Loading';
 
 export default function Popular(props) {
+  const baseUrl = process.env.REACT_APP_BASE_URL;
   const [pageNumber, setPageNumber] = useState(1);
-
   const { loading, error, shows, hasMore } = useSearch(
-    'https://api.themoviedb.org/3/tv/top_rated',
+    `${baseUrl}tv/popular`,
     pageNumber
   );
 
@@ -34,11 +35,12 @@ export default function Popular(props) {
           reference = lastMovieElementRef;
         }
         return (
-          <div ref={reference}>
+          <div key={show.id} ref={reference}>
             <h4>{show.name}</h4>
           </div>
         );
       })}
+      <div>{loading && <Loading />}</div>
     </div>
   );
 }
