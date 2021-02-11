@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useSearch from '../useSearch';
-import Popular from './Popular';
+import Tendencias from './Tendencias';
 import Top from './Top';
 export default function Home() {
   const { shows, error } = useSearch(
@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div>
-      <Popular onHome={true} />
+      <Tendencias onHome={true} />
       <Top onHome={true} />
     </div>
   );

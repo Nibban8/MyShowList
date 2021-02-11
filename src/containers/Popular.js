@@ -28,7 +28,7 @@ export default function Popular(props) {
 
   return (
     <div>
-      <h1>on Top</h1>
+      <h1>ON POPULAR</h1>
       {shows.map((show, index) => {
         let reference;
         if (shows.length === index + 1) {
