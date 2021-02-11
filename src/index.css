@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: darkslategray;
+  margin-bottom: 20px;
+}
+
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  border-radius: 20%;
+  background-color: white;
+}
+
+.overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sidenav {
+  background-color: darkslategray;
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Roboto', sans-serif;
+  background-color: darkslategray;
+}
+
+.sidenav div {
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  margin: auto !important;
+}
+
+.sidenav h3 {
+  color: white;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+}
+
+a {
+  padding: 0;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* .nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 14px;
+} */
