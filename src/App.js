@@ -11,15 +11,18 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 export default function App() {
   return (
     <Router>
-      <div>
-        <NavBar />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/popular' component={Popular} />
-          <Route path='/top_rated' component={Top} />
-          <Route path='/trending' component={Tendencias} />
-        </Switch>
-      </div>
+      <NavBar />
+
+      <React.StrictMode>
+        <span className='content'>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/popular' component={Popular} />
+            <Route path='/top_rated' component={Top} />
+            <Route path='/trending' component={Tendencias} />
+          </Switch>
+        </span>
+      </React.StrictMode>
     </Router>
   );
 }

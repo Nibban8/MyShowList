@@ -1,9 +1,8 @@
 import React from 'react';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
+import { Drawer, List, ListItem } from '@material-ui/core';
+
 import IconButton from '@material-ui/core/IconButton';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
 
 import { Link } from 'react-router-dom';
 

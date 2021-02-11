@@ -5,12 +5,15 @@
   font-family: 'Roboto', sans-serif;
 }
 nav {
+  width: 100%;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
   background-color: darkslategray;
   margin-bottom: 20px;
+  position: sticky;
 }
 
 .logo {
@@ -72,16 +75,22 @@ a {
   text-decoration: none;
 }
 
-/* .nav-links {
+.section-header {
+  height: 10vh;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  width: 35%;
+  background-color: aliceblue;
+  position: sticky;
+  top: 8vh;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  letter-spacing: 4px;
-  font-weight: 600;
-  font-size: 14px;
-} */
+.section-header h1 {
+  flex: 1;
+}
+
+.section-header button {
+  flex: 1;
+}

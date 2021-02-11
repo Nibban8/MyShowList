@@ -1,14 +1,24 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import useSearch from '../useSearch';
 import Loading from '../components/Loading';
+import SectionHeader from '../components/SectionHeader';
 
 export default function Popular(props) {
   const baseUrl = process.env.REACT_APP_BASE_URL;
   const [pageNumber, setPageNumber] = useState(1);
+  const [sort, setSort] = useState(false);
+
   const { loading, error, shows, hasMore } = useSearch(
     `${baseUrl}tv/popular`,
-    pageNumber
+    pageNumber,
+    sort
   );
+
+  function handleSort() {
+    setSort(!sort);
+  }
+
+  let sorted = shows;
 
   const observer = useRef();
 
@@ -28,7 +38,7 @@ export default function Popular(props) {
 
   return (
     <div>
-      <h1>ON POPULAR</h1>
+      <SectionHeader handleSort={handleSort} title='ON POPULAR' />
       {shows.map((show, index) => {
         let reference;
         if (shows.length === index + 1) {
